@@ -1,0 +1,20 @@
+# Build e execução otimizados para produção
+FROM node:20-alpine
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+COPY package*.json ./
+
+# Instala apenas dependências de produção para uma imagem leve
+RUN npm install --omit=dev --ignore-scripts && npm cache clean --force
+
+COPY . .
+
+# Prática recomendada de segurança: rodar como usuário não-root
+USER node
+
+EXPOSE 3000
+
+CMD ["node", "src/index.js"]

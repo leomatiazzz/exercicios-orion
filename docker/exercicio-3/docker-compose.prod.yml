@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: exercicio-3-db-prod
+    restart: always
+    env_file:
+      - .env.prod
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - prod-network
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.prod
+    container_name: exercicio-3-api-prod
+    restart: always
+    env_file:
+      - .env.prod
+    ports:
+      - "3000:3000"
+    # Em produção NÃO montamos volumes de código fonte local
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - prod-network
+
+volumes:
+  postgres_data_prod:
+    driver: local
+
+networks:
+  prod-network:
+    driver: bridge
