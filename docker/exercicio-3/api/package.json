@@ -1,0 +1,18 @@
+{
+  "name": "exercicio-3-multi-ambientes",
+  "version": "1.0.0",
+  "description": "Exercício 3 - Ambientes Dev e Prod com Boas Práticas",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+

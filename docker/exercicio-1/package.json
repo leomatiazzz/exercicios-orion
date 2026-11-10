@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-1-hello-docker",
+  "version": "1.0.0",
+  "description": "Exercício 1 - Hello from Docker",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+
