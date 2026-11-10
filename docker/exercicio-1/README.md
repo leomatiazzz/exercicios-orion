@@ -1,4 +1,4 @@
-# Exercício 1 — Dockerfile + Compose: “Hello Container”
+# Exercício 1 — Dockerfile + compose: "hello container"
 
 ## Objetivo
 Aprender a criar uma imagem customizada a partir de um Dockerfile e orquestrar com o docker-compose.

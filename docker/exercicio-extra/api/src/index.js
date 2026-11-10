@@ -60,7 +60,7 @@ app.get('/health', async (req, res) => {
 // Rota raiz informativa
 app.get('/', (req, res) => {
   res.json({
-    message: '🚀 Desafio Extra - Stack Completa Docker Compose',
+    message: '🚀 Desafio extra - stack completa com docker compose',
     routes: {
       healthCheck: 'GET /health',
       listUsers: 'GET /users',
@@ -102,3 +102,4 @@ app.listen(PORT, async () => {
   console.log(`🌐 Servidor API ouvindo na porta ${PORT}`);
   await initDb();
 });
+

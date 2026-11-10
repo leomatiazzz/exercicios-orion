@@ -1,4 +1,4 @@
-# Exercício 2 — Compose com API + Banco de Dados
+# Exercício 2 — compose com API + banco de dados
 
 ## Objetivo
 Aprender a conectar múltiplos containers (API + DB) usando docker-compose, rede interna e variáveis de ambiente sensíveis via `.env`.

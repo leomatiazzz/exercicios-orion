@@ -1,14 +1,14 @@
-# 🚀 Desafio Extra — Aplicação Completa com Docker Compose
+# 🚀 Desafio extra — aplicação completa com docker compose
 
 ## Objetivo
 Desenvolver e orquestrar uma aplicação completa composta por **3 serviços**:
 1. **API (backend)**: Node.js com Express e Dockerfile customizado.
-2. **Banco de Dados**: PostgreSQL com volume persistente e verificação de saúde (`healthcheck`).
-3. **Interface de Administração**: Adminer web para visualizar e interagir com os dados via navegador.
+2. **Banco de dados**: PostgreSQL com volume persistente e verificação de saúde (`healthcheck`).
+3. **Interface de administração**: Adminer web para visualizar e interagir com os dados via navegador.
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Estrutura do projeto
 ```text
 exercicio-extra/
 ├── api/
@@ -51,25 +51,25 @@ exercicio-extra/
 
 ## 🧪 Como testar a aplicação
 
-### 1. Testar Rota `/health`
+### 1. Testar rota `/health`
 ```bash
 curl http://localhost:3000/health
 ```
 **Resposta esperada:** `{"status":"ok"}`
 
-### 2. Listar Usuários
+### 2. Listar usuários
 ```bash
 curl http://localhost:3000/users
 ```
 
-### 3. Cadastrar Novo Usuário
+### 3. Cadastrar novo usuário
 ```bash
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
   -d '{"name": "Dev Orion", "email": "dev@orion.dev"}'
 ```
 
-### 4. Acessar Interface de Administração Web (Adminer)
+### 4. Acessar interface de administração web (Adminer)
 Abra no seu navegador: **[http://localhost:8080](http://localhost:8080)**
 
 Preencha os dados de login:

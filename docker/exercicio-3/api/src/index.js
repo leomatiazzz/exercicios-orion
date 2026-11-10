@@ -39,7 +39,7 @@ async function initDb() {
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Exercício 3 - Multi-ambientes',
+    message: 'Exercício 3 - multi-ambientes',
     environment: NODE_ENV,
     liveReload: NODE_ENV === 'development',
     timestamp: new Date().toISOString()
@@ -82,3 +82,4 @@ app.listen(PORT, async () => {
   console.log(`🚀 Exercício 3 rodando em http://localhost:${PORT} [Ambiente: ${NODE_ENV}]`);
   await initDb();
 });
+

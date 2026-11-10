@@ -11,3 +11,4 @@ services:
       - /app/node_modules
     environment:
       - PORT=3000
+

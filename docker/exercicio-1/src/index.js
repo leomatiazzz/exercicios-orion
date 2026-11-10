@@ -10,3 +10,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Exercício 1 rodando em http://localhost:${PORT}`);
 });
+

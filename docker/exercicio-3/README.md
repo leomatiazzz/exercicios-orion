@@ -1,4 +1,4 @@
-# Exercício 3 — Boas Práticas + Múltiplos Ambientes
+# Exercício 3 — boas práticas + múltiplos ambientes
 
 ## Objetivo
 Aplicar boas práticas de build e configuração de ambientes distintos (**desenvolvimento** e **produção**).
@@ -21,7 +21,7 @@ Aplicar boas práticas de build e configuração de ambientes distintos (**desen
    cd docker/exercicio-3
    ```
 
-### 🛠️ Ambiente de Desenvolvimento (Dev)
+### 🛠️ Ambiente de desenvolvimento (dev)
 ```bash
 # Iniciar o ambiente de desenvolvimento
 docker compose -f docker-compose.dev.yml up --build
@@ -33,7 +33,7 @@ curl http://localhost:3000
 docker compose -f docker-compose.dev.yml down
 ```
 
-### 🚀 Ambiente de Produção (Prod)
+### 🚀 Ambiente de produção (prod)
 ```bash
 # Iniciar o ambiente de produção
 docker compose -f docker-compose.prod.yml up --build -d

@@ -39,3 +39,4 @@ volumes:
 networks:
   prod-network:
     driver: bridge
+

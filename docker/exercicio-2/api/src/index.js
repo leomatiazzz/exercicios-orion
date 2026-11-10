@@ -83,3 +83,4 @@ app.listen(PORT, async () => {
   console.log(`🚀 Exercício 2 - API rodando em http://localhost:${PORT}`);
   await initDb();
 });
+
