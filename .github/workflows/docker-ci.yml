@@ -1,0 +1,60 @@
+name: Validar Exercícios Docker
+
+on:
+  push:
+    branches: [ main, feature/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-docker:
+    name: Build e Validação dos Containers
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Validar Exercício 1 (Hello Container)
+        run: |
+          cd docker/exercicio-1
+          docker compose build
+          docker compose up -d
+          sleep 5
+          curl -f http://localhost:3000
+          docker compose down
+
+      - name: Validar Exercício 2 (API + DB)
+        run: |
+          cd docker/exercicio-2
+          docker compose build
+          docker compose up -d
+          sleep 10
+          curl -f http://localhost:3000/health
+          docker compose down -v
+
+      - name: Validar Exercício 3 (Dev & Prod)
+        run: |
+          cd docker/exercicio-3
+          # Teste Dev
+          docker compose -f docker-compose.dev.yml build
+          docker compose -f docker-compose.dev.yml up -d
+          sleep 10
+          curl -f http://localhost:3000/health
+          docker compose -f docker-compose.dev.yml down -v
+
+          # Teste Prod
+          docker compose -f docker-compose.prod.yml build
+          docker compose -f docker-compose.prod.yml up -d
+          sleep 10
+          curl -f http://localhost:3000/health
+          docker compose -f docker-compose.prod.yml down -v
+
+      - name: Validar Desafio Extra (API + DB + Adminer)
+        run: |
+          cd docker/exercicio-extra
+          docker compose build
+          docker compose up -d
+          sleep 10
+          curl -f http://localhost:3000/health
+          docker compose down -v
