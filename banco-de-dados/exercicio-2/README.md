@@ -14,3 +14,4 @@ Consultar dados de múltiplas tabelas relacionais através de `INNER JOIN`, apli
 2. Abra o arquivo [exercicio-2.sql](./exercicio-2.sql).
 3. Execute cada consulta em sequência.
 4. Salve os prints do resultado das consultas dentro da pasta `prints/`.
+

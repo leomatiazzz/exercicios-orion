@@ -16,3 +16,4 @@ Aprender os comandos básicos de SQL para definição de dados (DDL - `CREATE TA
 2. Abra o script [exercicio-1.sql](./exercicio-1.sql).
 3. Execute as instruções na ordem indicada.
 4. Salve os prints do resultado das consultas dentro da pasta `prints/`.
+

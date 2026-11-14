@@ -16,3 +16,4 @@ Manipular e filtrar estruturas aninhadas e arrays em banco de dados NoSQL (Mongo
   docker exec -it orion_mongo_db mongosh -u orion_admin -p orion_admin_pass --authenticationDatabase admin
   ```
 - Salve os prints do resultado das consultas dentro da pasta `prints/`.
+

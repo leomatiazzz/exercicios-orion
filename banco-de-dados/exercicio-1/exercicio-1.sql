@@ -37,3 +37,4 @@ SELECT * FROM alunos;
 -- 6. Teste de integridade referencial (deve falhar pois o curso_id 999 não existe)
 -- Descomente a linha abaixo para validar a restrição da chave estrangeira:
 -- INSERT INTO alunos (nome, email, curso_id) VALUES ('Aluno Inválido', 'invalido@email.com', 999);
+

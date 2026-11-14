@@ -16,3 +16,4 @@ Compreender a estrutura de documentos em bancos de dados NoSQL (MongoDB) e demon
   docker exec -it orion_mongo_db mongosh -u orion_admin -p orion_admin_pass --authenticationDatabase admin
   ```
 - Salve os prints do resultado da consulta `find()` dentro da pasta `prints/`.
+

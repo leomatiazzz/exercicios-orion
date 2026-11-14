@@ -78,3 +78,4 @@ banco-de-dados/
 Após rodar os scripts no DBeaver (ou na ferramenta de sua escolha):
 1. Tire print das telas comprovando a execução dos comandos e a exibição das tabelas/documentos retornados.
 2. Salve as imagens dentro da pasta `prints/` correspondente a cada exercício.
+

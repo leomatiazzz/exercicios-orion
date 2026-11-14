@@ -42,3 +42,4 @@ SELECT
 FROM cursos
 LEFT JOIN alunos ON cursos.id = alunos.curso_id
 WHERE alunos.id IS NULL;
+

@@ -35,3 +35,4 @@ db.posts.find({ autor: 'Leo' });
 
 // 4. Consulta para visualizar o post com o array de comentários aninhados
 db.posts.find({ 'comentarios.0': { $exists: true } });
+

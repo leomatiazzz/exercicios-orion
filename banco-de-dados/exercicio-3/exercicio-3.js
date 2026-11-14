@@ -27,3 +27,4 @@ db.posts.insertOne({
 
 // 4. Consultar todos os documentos cadastrados na coleção 'posts' (Read)
 db.posts.find();
+
