@@ -1,16 +1,16 @@
 # Módulo de banco de dados — Orion bootcamp (New Rizon)
 
-Este diretório contém a resolução de todos os exercícios do módulo de banco de dados:
+Este diretório contém a resolução de todos os exercícios práticos do módulo de banco de dados, cobrindo bancos relacionais (PostgreSQL) e não relacionais (MongoDB).
 
 ```text
 banco-de-dados/
-├── Banco de dados - Exercícios.pdf     # Especificação oficial dos exercícios
 ├── docker-compose.yml                  # Orquestração do PostgreSQL e MongoDB
+├── README.md                           # Guia geral de execução e credenciais
 │
 ├── exercicio-1/                        # Exercício 1 — Banco relacional (SQL básico)
-│   ├── exercicio-1.sql                 (DDL de cursos/alunos, FKs, INSERTs e SELECT)
+│   ├── exercicio-1.sql                 (DDL de cursos/alunos, FKs, INSERTs, SELECT e validação de erro)
 │   ├── README.md
-│   └── prints/                         (Salve aqui seus prints do resultado)
+│   └── prints/                         (Evidências dos resultados e validação da FK)
 │
 ├── exercicio-2/                        # Exercício 2 — Banco relacional (JOINs e filtros)
 │   ├── exercicio-2.sql                 (INNER JOIN, WHERE, UPDATE e LEFT JOIN)
@@ -54,16 +54,16 @@ banco-de-dados/
 
 ---
 
-## 🔌 Dados de conexão para o dbeaver
+## 🔌 Dados de conexão das ferramentas
 
-### 1. PostgreSQL (Exercícios 1 e 2)
+### 1. PostgreSQL (DBeaver) — Exercícios 1 e 2
 * **Host:** `localhost`
 * **Porta:** `5432`
 * **Banco de dados:** `orion_db`
 * **Usuário:** `orion_user`
 * **Senha:** `orion_password`
 
-### 2. MongoDB (Exercícios 3 e 4)
+### 2. MongoDB (MongoDB Compass / mongosh) — Exercícios 3 e 4
 * **URI de conexão:**
   `mongodb://orion_admin:orion_admin_pass@localhost:27017/`
 * **Host:** `localhost`
@@ -74,8 +74,9 @@ banco-de-dados/
 
 ---
 
-## 📸 Como organizar a entrega dos prints
-Após rodar os scripts no DBeaver (ou na ferramenta de sua escolha):
-1. Tire print das telas comprovando a execução dos comandos e a exibição das tabelas/documentos retornados.
-2. Salve as imagens dentro da pasta `prints/` correspondente a cada exercício.
-
+## 📸 Evidências entregues (prints)
+Cada subpasta de exercício contém seu diretório `prints/` com as capturas de tela comprovando a execução bem-sucedida:
+* **Exercício 1:** `prints/exercicio-1.jpg` (SELECT alunos) e `prints/exercicio-1-fk.jpg` (erro `fk_aluno_curso` comprovando a integridade da chave estrangeira).
+* **Exercício 2:** `prints/exercicio-2.1.jpg` a `2.4.jpg` (JOINs, WHERE, UPDATE e LEFT JOIN).
+* **Exercício 3:** `prints/exercicio-3.jpg` (Schema flexível no MongoDB Compass).
+* **Exercício 4:** `prints/exercicio-4.1.jpg` a `4.4.jpg` (Filtro por tags, autor e comentários aninhados).
