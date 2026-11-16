@@ -11,7 +11,10 @@ Consultar dados de múltiplas tabelas relacionais através de `INNER JOIN`, apli
 
 ## Como executar no dbeaver
 1. Conecte-se ao banco PostgreSQL (`orion_db`).
-2. Abra o arquivo [exercicio-2.sql](./exercicio-2.sql).
-3. Execute cada consulta em sequência.
-4. Salve os prints do resultado das consultas dentro da pasta `prints/`.
+2. Abra e execute o script [exercicio-2.sql](./exercicio-2.sql).
 
+## Evidências da entrega (prints)
+* **`prints/exercicio-2.1.jpg`:** Consulta `INNER JOIN` retornando o nome de cada aluno associado ao nome do respectivo curso.
+* **`prints/exercicio-2.2.jpg`:** Consulta com `WHERE` filtrando apenas os alunos do curso "Desenvolvimento Web".
+* **`prints/exercicio-2.3.jpg`:** Comprovação da execução do `UPDATE`, mostrando Maria Santos vinculada a "Ciência de Dados".
+* **`prints/exercicio-2.4.jpg`:** Desafio avançado com `LEFT JOIN` identificando o curso sem alunos ("Engenharia de Software").
